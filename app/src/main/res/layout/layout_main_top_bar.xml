@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:elevation="1dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_menu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:scaleType="center"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintTop_toTopOf="@id/ts_location"
+        app:layout_constraintBottom_toBottomOf="@id/ts_location"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextSwitcher
+        android:id="@+id/ts_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="100dp"
+        android:inAnimation="@anim/message_in_anim"
+        android:outAnimation="@anim/message_out_anim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_about"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:clickable="true"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_tip"
+        app:layout_constraintTop_toTopOf="@id/ts_location"
+        app:layout_constraintBottom_toBottomOf="@id/ts_location"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

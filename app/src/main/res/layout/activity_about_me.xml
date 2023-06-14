@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_left"
+            app:titleCentered="true"
+            app:title="关于此项目" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/line_divider" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_app"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_version_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:text="v0.1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="16dp"
+            android:gravity="start|left"
+            android:layout_marginTop="12dp"
+            android:text="开源相关"
+            android:textColor="@color/textColorPrimary"
+            android:background="@color/pathBgColor"
+            android:paddingEnd="16dp"
+            android:layout_height="match_parent"
+            tools:ignore="RtlHardcoded" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_licence"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            tools:listitem="@layout/item_licenses"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
