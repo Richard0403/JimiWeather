@@ -33,33 +33,21 @@ android {
         }
 
         buildConfigField 'String', 'HE_WEB_KEY', quotWrapper("9426666bcdc44c17901c58a1a7d51b33")
-//        buildConfigField 'String', 'He_KEY', quotWrapper("c")
-//        buildConfigField 'String', 'Accu_Key', quotWrapper("a")
-//        buildConfigField 'String', 'HE_ID', quotWrapper("2")
         buildConfigField 'String', 'CAIYUN', quotWrapper("mOQ3KNVG1rXoCH75")
         buildConfigField 'String', 'APP_CENTER_KEY', quotWrapper("0")
-    }
-
-    signingConfigs {
-        signingConfig {
-            storeFile rootProject.file("key.jks")
-            storePassword 'SPICa27'
-            keyAlias 'wuqi'
-            keyPassword 'SPICa27'
-        }
     }
 
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
-            signingConfig signingConfigs.signingConfig
+//            signingConfig signingConfigs.signingConfig
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             minifyEnabled false
 //            shrinkResources true
-            signingConfig signingConfigs.signingConfig
+//            signingConfig signingConfigs.signingConfig
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
